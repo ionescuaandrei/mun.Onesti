@@ -27,3 +27,15 @@ li{
 a{
   text-decoration: none;
 }
+
+.red{
+  color: #ff0016
+}
+
+.blue{
+  color: rgb(0, 48, 150);
+}
+
+.green{
+  color: #20d17f;
+}
