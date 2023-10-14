@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'FoundersGrotesk-regular'; 
+  src: url('/font/FoundersGrotesk-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FoundersGrotesk-semibold';
+  src: url('/font/FoundersGrotesk-Semibold.otf') format('opentype'); 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'FoundersGrotesk-regular', Arial,sans-serif;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
