@@ -79,6 +79,35 @@ a.nav-title:hover{
   transform: scale(1.1);
 }
 
+a.nav-title-dropdown{
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* Style the horizontal bar using ::after pseudo-element */
+a.nav-title-dropdown::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(0, 48, 150);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+/* Create a hover effect for the horizontal bar */
+a.nav-title-dropdown:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 .nav-2 img{
   transition: transform 0.3s ease;
 }
@@ -124,4 +153,10 @@ a.nav-title:hover{
 .subtitle{
   font-size: 1.3rem;
   font-weight: 100;
+}
+
+img.slider-img{
+  height: 70vh;
+  object-fit: cover;
+  margin: 0 auto;
 }
