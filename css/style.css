@@ -1,11 +1,11 @@
 nav{
   background-color: #f4f4f4;
-  height: 70px;
   display: grid;
   place-items: center;
+  height: 70px;
 }
 
-.container-nav{
+.navbar-full{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,18 +13,9 @@ nav{
   margin: 0 auto;
 }
 
-.navbar{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.nav-1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+.navbar-desktop{
+  display: grid;
+  place-items: center;
 }
 
 .home{
@@ -43,6 +34,22 @@ nav{
   background-color: #ccc;
   border-radius: 50%;
   transform: scale(1.5);
+}
+
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+}
+
+.nav-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
 }
 
 a.nav-title{
@@ -108,13 +115,70 @@ a.nav-title-dropdown:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-.nav-2 img{
-  transition: transform 0.3s ease;
+
+.dropdown-mobile{
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0;
+  top: 90px;
+  width: 300px;
+  background: #213f99;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
 }
 
-.nav-2 img:hover{
-  transform: scale(1.3);
+.dropdown-mobile li{
+  padding-top: 20px;
 }
+
+.dropdown-mobile li a{
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.dropdown-mobile.open{
+  display: block;
+  height: 255px;
+}
+
+.dropdown li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.ul.dropdown-menu li{
+  padding: 0;
+}
+
+ul.dropdown-menu.show{
+  width: 20 0px;
+  z-index: 100;
+}
+
+a.dropdown-item.nav-title-dropdown{
+  padding: 0;
+  margin: 0;
+}
+
+li a.nav-title-dropdown{
+  font-size: 1rem;
+}
+
+.toggle-button{
+  color: #213f99;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: right;
+  display: none;
+}
+
 
 .title-band{
   display: flex;
