@@ -1,9 +1,15 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+const burgerIcon = document.querySelector(".burger-icon");
+const navMobile = document.querySelector(".navbar-container-mobile");
+
+// Initially set display to "none"
+navMobile.style.display = "none";
+
+burgerIcon.addEventListener("click", () => {
+  // Toggle display value between "flex" and "none"
+  if (navMobile.style.display === "none") {
+    navMobile.style.display = "flex";
   } else {
-    x.className = "topnav";
+    navMobile.style.display = "none";
   }
-}
+});
+

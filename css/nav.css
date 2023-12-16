@@ -1,159 +1,139 @@
-.home{
+nav{
+  background-color: #f4f4f4;
+  display: grid;
+  place-items: center;
+  height: 70px;
+}
+
+.navbar-full{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.navbar-mobile{
+  display: none;
+}
+
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.home ion-icon{
-  font-size: 1.2rem;
+.home ion-icon {
+  font-size: 1.1rem;
   transition: transform 0.5s ease;
   padding: 5px;
 }
 
-.home ion-icon:hover{
+.home ion-icon:hover {
   background-color: #003996;
   color: #fff;
   border-radius: 50%;
   transform: scale(1.5);
 }
 
-.topnav {
-  overflow: hidden;
+.navbar{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  position: relative;
 }
 
-.topnav a {
+a.nav-element{
   padding: 8px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #000;
   text-decoration: none;
-  font-size: 1.2rem;
-  position: relative; /* Add relative positioning for the ::after pseudo-element */
-  transition: color 0.5s ease; /* Add transition for smooth color change */
+  font-size: 1.1rem;
 }
 
-.topnav a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: transparent; /* Initially transparent */
-  transform-origin: bottom right;
-  transform: scaleX(0); /* Initially, set the scale to 0 for no underline */
-  transition: transform 0.5s ease, background-color 0.5s ease; /* Add transition for smooth animation */
-}
-
-.topnav a.active{
+a.nav-element:hover{
   color: #003996;
 }
 
-.topnav a.active::after,
-.topnav a:hover::after {
-  transform-origin: bottom left;
-  transform: scaleX(1); /* Scale to 1 on hover or when active for the underline effect */
-  background-color: #003996; /* Blue color for the underline on hover or when active */
+a.active{
+  color: #003996;
 }
 
-.topnav a:hover {
-  color: #003996; /* Change text color on hover */
-}
-
-a.icon {
-  display: none;
-}
-
-.dropdown {
-  overflow: hidden;
+.galerie {
   position: relative;
-}
-
-.dropbtn {
-  font-size: 1.2rem;
-  border: none;
-  outline: none;
-  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 10px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
 }
 
-.dropbtn::after{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: transparent; /* Initially transparent */
-  transform-origin: bottom right;
-  transform: scaleX(0); /* Initially, set the scale to 0 for no underline */
-  transition: transform 0.5s ease, background-color 0.5s ease; /* Add transition for smooth animation */
+.galerie .galerie-element{
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 0;
+  outline: none;
+  background: none;
 }
 
-.dropbtn:hover::after{
-  transform-origin: bottom left;
-  transform: scaleX(1); /* Scale to 1 on hover or when active for the underline effect */
-  background-color: #003996; /* Blue color for the underline on hover or when active */
+ion-icon{
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 0;
+  outline: none;
+  background: none;
 }
 
-.dropbtn:hover{
+.galerie:hover .galerie-element,
+.galerie:hover ion-icon
+{
   color: #003996;
 }
 
-
-
-
-@media screen and (max-width: 600px) {
-  .dropdown .dropbtn {
-    display: none;
-  }
-
-  .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-  }
-
-  .topnav.responsive {
-    flex-direction: column;
-  }
-
-  .topnav.responsive a {
-    text-align: center;
-  }
-
-  .topnav.responsive .dropdown {
-    position: static;
-  }
-
-  .topnav.responsive .dropdown-content {
-    position: static;
-    display: none;
-  }
-
-  .topnav.responsive .dropdown .dropbtn {
-    width: 100%;
-    text-align: left;
-  }
-
-  /* Display dropdown content when icon is hovered */
-  .topnav.responsive .icon:hover + a {
-    display: block;
-  }
-
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+.dropdown-galerie {
+  display: none;
+  border-radius: 15px;
+  background-color: #f4f4f4;
+  min-width: 200px;
+  position: absolute;
+  top: 40px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px); /* Move the dropdown up initially */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Specify the properties to animate */
 }
+
+.dropdown-galerie-element {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.dropdown-galerie-element:hover {
+  color: #003996;
+}
+
+.dropdown:hover .dropdown-galerie,
+.dropdown-galerie:hover {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Move the dropdown down to its original position */
+}
+

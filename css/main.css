@@ -1,0 +1,45 @@
+
+.title-band{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70%;
+  margin: 0 auto;
+  gap: 100px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img{
+  width: 150px;
+  display: block;
+}
+
+.main-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title{
+  padding-top: 20px;
+}
+
+.project-title{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.subtitle{
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+img.slider-img{
+  height: 70vh;
+  object-fit: cover;
+  margin: 0 auto;
+}

@@ -1,0 +1,118 @@
+@media (max-width:992px) {
+  .navbar{
+    display: none;
+  }
+
+  .navbar-mobile{
+    display: block;
+  }
+  
+  .burger-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-mobile ion-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 5px;
+  }
+
+  .navbar-container-mobile{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #f4f4f4;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 4;
+  }
+
+  a.nav-element{
+    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .galerie {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 7px;
+  }
+  
+  .galerie .galerie-element{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 0;
+    outline: none;
+    background: none;
+  }
+  
+  .galerie ion-icon{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 0;
+    outline: none;
+    background: none;
+  }
+  
+  .galerie:hover .galerie-element,
+  .galerie:hover ion-icon
+  {
+    color: #003996;
+  }
+  
+  .dropdown-galerie {
+    position: relative;
+    border-radius: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+    width: 100%;
+  }
+  
+  .dropdown-galerie-element {
+    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .dropdown-galerie-element:hover {
+    color: #003996;
+  }
+  
+  .galerie:hover .dropdown-galerie,
+  .dropdown-galerie:hover {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Move the dropdown down to its original position */
+  }
+}
