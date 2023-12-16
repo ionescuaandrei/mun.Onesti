@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/universal.css">
   <link rel="stylesheet" href="css/mobile.css">
   <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
   <nav>
@@ -19,7 +20,24 @@
         <ion-icon name="home-outline"></ion-icon>
       </div>
 
-      <div class="navbar-desktop">
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Despre noi</a>
+        <a href="#news">Perioadă de implementare</a>
+        <div class="dropdown">
+          <button class="dropbtn">Galerie 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Eveniment lansare proiect</a>
+            <a href="#">Eveniment închidere proiect</a>
+          </div>
+        </div> 
+        <a href="#contact">Contact</a>
+        <a href="#contact">RO</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+      <!-- <div class="navbar-desktop">
         <ul class="navbar-container">
             <li><a class="nav-title" href="#" >Despre Noi</a></li>
             <span class="separator">|</span>
@@ -38,9 +56,9 @@
             <li><a class="nav-title" href="#">RO</a></li>
             <span class="separator">|</span>
         </ul>
-        </div>       
+        </div>        -->
         
-        <div class="toggle-button">
+        <!-- <div class="toggle-button">
           <i class="fa-solid fa-bars"></i>
         </div>
 
@@ -57,7 +75,7 @@
           </li>
           <li><a href="#">Contact</a></li>
       </div>
-    </div>
+    </div> -->
   </nav>
 
   <div class="title-band">
@@ -89,6 +107,7 @@
 
 
   <script src="js/slider.js"></script>
+  <script src="js/nav.js"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

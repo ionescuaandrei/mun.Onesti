@@ -1,0 +1,159 @@
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home ion-icon{
+  font-size: 1.2rem;
+  transition: transform 0.5s ease;
+  padding: 5px;
+}
+
+.home ion-icon:hover{
+  background-color: #003996;
+  color: #fff;
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+
+.topnav {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.topnav a {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative; /* Add relative positioning for the ::after pseudo-element */
+  transition: color 0.5s ease; /* Add transition for smooth color change */
+}
+
+.topnav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent; /* Initially transparent */
+  transform-origin: bottom right;
+  transform: scaleX(0); /* Initially, set the scale to 0 for no underline */
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Add transition for smooth animation */
+}
+
+.topnav a.active{
+  color: #003996;
+}
+
+.topnav a.active::after,
+.topnav a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1); /* Scale to 1 on hover or when active for the underline effect */
+  background-color: #003996; /* Blue color for the underline on hover or when active */
+}
+
+.topnav a:hover {
+  color: #003996; /* Change text color on hover */
+}
+
+a.icon {
+  display: none;
+}
+
+.dropdown {
+  overflow: hidden;
+  position: relative;
+}
+
+.dropbtn {
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 8px 10px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropbtn::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent; /* Initially transparent */
+  transform-origin: bottom right;
+  transform: scaleX(0); /* Initially, set the scale to 0 for no underline */
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Add transition for smooth animation */
+}
+
+.dropbtn:hover::after{
+  transform-origin: bottom left;
+  transform: scaleX(1); /* Scale to 1 on hover or when active for the underline effect */
+  background-color: #003996; /* Blue color for the underline on hover or when active */
+}
+
+.dropbtn:hover{
+  color: #003996;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+  }
+
+  .topnav.responsive {
+    flex-direction: column;
+  }
+
+  .topnav.responsive a {
+    text-align: center;
+  }
+
+  .topnav.responsive .dropdown {
+    position: static;
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: static;
+    display: none;
+  }
+
+  .topnav.responsive .dropdown .dropbtn {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Display dropdown content when icon is hovered */
+  .topnav.responsive .icon:hover + a {
+    display: block;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
