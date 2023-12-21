@@ -62,3 +62,62 @@ p.p-content{
   text-align: justify;
 }
 
+.main-gallery-row{
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.main-gallery{
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.column-gallery{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.inchidere-img{
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.prezentare{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.prezentare h3{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.prezentare a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: #fff;
+  background: #003996;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.prezentare a:hover{
+  transform: scale(1.1);
+}
