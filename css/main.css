@@ -52,6 +52,7 @@ main{
 }
 
 .h2-title{
+  text-align: center;
   font-size: 1.3rem;
   color: #003996;
 }
@@ -60,3 +61,4 @@ p.p-content{
   font-size: 1rem;
   text-align: justify;
 }
+
