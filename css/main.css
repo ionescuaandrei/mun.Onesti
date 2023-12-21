@@ -45,3 +45,18 @@ img.slider-img{
 }
 
 /* Main Styles */
+
+main{
+  width: calc(100% - 300px);
+  margin: 1rem auto;
+}
+
+.h2-title{
+  font-size: 1.3rem;
+  color: #003996;
+}
+
+p.p-content{
+  font-size: 1rem;
+  text-align: justify;
+}
