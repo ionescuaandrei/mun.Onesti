@@ -1,4 +1,4 @@
-
+ /* Gallery */
 .title-band{
   display: flex;
   align-items: center;
@@ -43,3 +43,5 @@ img.slider-img{
   object-fit: cover;
   margin: 0 auto;
 }
+
+/* Main Styles */
